@@ -3,6 +3,8 @@ import { auth, login, logout } from "./actions";
 import styles from "./page.module.css";
 
 export default async function Home() {
+  // if user is logged in, there will be a subject object
+  // So, this can be used to determine if user is logged in
   const subject = await auth();
 
   return (
